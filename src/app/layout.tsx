@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={openSans.className}>
-        <div className="container relative md:flex">
+        <div className="max-w-[1440px] mx-auto relative md:flex">
           <Sidebar />
 
-          <main className="md:flex-1">{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
       </body>
     </html>
