@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={openSans.className}>
-        <div className="relative md:flex">
+        <div className="container relative md:flex">
           <Sidebar />
 
           <main className="md:flex-1">{children}</main>
