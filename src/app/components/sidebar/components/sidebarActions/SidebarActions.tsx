@@ -4,7 +4,7 @@ import { Dispatch } from "react";
 
 import { useSidebarActions } from "./useSidebarActions";
 
-import { Button } from "app/components/ui/button";
+import { Button } from "components/ui/button";
 import { ChevronsLeftIcon, ChevronsRightIcon } from "lucide-react";
 
 interface sidebarActionsProps {

@@ -1,3 +1,5 @@
+const { url } = require("inspector");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -30,6 +32,7 @@ module.exports = {
           primary: "#4f91f9",
           dark: "#040B14",
         },
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -63,6 +66,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      backgroundImage: {
+        hero: "radial-gradient(rgba(5, 13, 24, 0.8), rgba(5, 13, 24, 0.6), rgba(5, 13, 24, 0.5), rgba(5, 13, 24, 0.4)), url('/hero-bg.jpg')",
       },
       borderRadius: {
         lg: "var(--radius)",

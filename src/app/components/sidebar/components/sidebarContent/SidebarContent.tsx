@@ -3,9 +3,9 @@
 import Link from "next/link";
 import React from "react";
 
-import { useSidebarContent } from "./useSidebarContent";
+import { Avatar, AvatarFallback, AvatarImage } from "components/ui/avatar";
 
-import { Avatar, AvatarFallback, AvatarImage } from "app/components/ui/avatar";
+import { useSidebarContent } from "./useSidebarContent";
 
 interface sidebarContentProps {
   isCollapsed: boolean;
