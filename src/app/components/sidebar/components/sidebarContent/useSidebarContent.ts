@@ -13,7 +13,7 @@ import { twMerge } from "tailwind-merge";
 export const useSidebarContent = (isCollapsed: boolean) => {
   const navLinks = [
     { name: "Home", href: "/", icon: HomeIcon },
-    { name: "Sobre mim", href: "/", icon: UserIcon },
+    { name: "Sobre mim", href: "/#about", icon: UserIcon },
     { name: "Currículo", href: "/about", icon: FileTextIcon },
     { name: "Portfólio", href: "/projects", icon: FolderGit2Icon },
     { name: "Contatos", href: "/contact", icon: MailIcon },

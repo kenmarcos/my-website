@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "../ui/button";
+import { Button } from "../../../components/ui/button";
 import SidebarActions from "./components/sidebarActions/SidebarActions";
 import SidebarContent from "./components/sidebarContent/SidebarContent";
 import SidebarFooter from "./components/sidebarFooter/SidebarFooter";
