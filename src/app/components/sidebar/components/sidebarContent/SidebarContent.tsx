@@ -54,7 +54,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
         </nav>
       </div>
 
-      <nav className="mt-10">
+      <nav className="mt-8">
         <ul>
           {navLinks.map(({ icon: Icon, ...link }) => (
             <li key={link.name}>

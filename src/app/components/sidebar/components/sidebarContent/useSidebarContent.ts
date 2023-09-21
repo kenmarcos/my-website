@@ -1,4 +1,5 @@
 import {
+  ComputerIcon,
   FileTextIcon,
   FolderGit2Icon,
   GithubIcon,
@@ -14,9 +15,10 @@ export const useSidebarContent = (isCollapsed: boolean) => {
   const navLinks = [
     { name: "Home", href: "/", icon: HomeIcon },
     { name: "Sobre mim", href: "/#about", icon: UserIcon },
-    { name: "Currículo", href: "/about", icon: FileTextIcon },
+    { name: "Habilidades", href: "/#skills", icon: ComputerIcon },
+    { name: "Currículo", href: "/resume", icon: FileTextIcon },
     { name: "Portfólio", href: "/projects", icon: FolderGit2Icon },
-    { name: "Contatos", href: "/contact", icon: MailIcon },
+    { name: "Contatos", href: "/#contact", icon: MailIcon },
   ];
 
   const socialLinks = [
