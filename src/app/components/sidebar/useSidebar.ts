@@ -3,7 +3,7 @@ import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const useSidebar = () => {
-  const [isShow, setIsShow] = useState(innerWidth > 768);
+  const [isShow, setIsShow] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const asideClassName = twMerge(
