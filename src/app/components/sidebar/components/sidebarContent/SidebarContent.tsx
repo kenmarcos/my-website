@@ -56,15 +56,17 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
 
       <nav className="mt-8">
         <ul>
-          {navLinks.map(({ icon: Icon, ...link }) => (
-            <li key={link.name}>
+          {navLinks.map(({ icon: Icon, name, href }) => (
+            <li key={name}>
               <Link
-                href={link.href}
+                href={href}
                 className={navLinkClassName}
-                title={link.name}
+                title={name}
+                target={name === "Currículo" ? "_blank" : "_self"}
+                rel={name === "Currículo" ? "noopener noreferrer" : undefined}
               >
                 <Icon size={20} />
-                {!isCollapsed && <p>{link.name}</p>}
+                {!isCollapsed && <p>{name}</p>}
               </Link>
             </li>
           ))}

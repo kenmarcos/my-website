@@ -16,7 +16,11 @@ export const useSidebarContent = (isCollapsed: boolean) => {
     { name: "Home", href: "/", icon: HomeIcon },
     { name: "Sobre mim", href: "/#about", icon: UserIcon },
     { name: "Habilidades", href: "/#skills", icon: ComputerIcon },
-    { name: "Currículo", href: "/resume", icon: FileTextIcon },
+    {
+      name: "Currículo",
+      href: "https://drive.google.com/file/d/1dliLFFyLMfrCiAve5SycyjSCGqKCnmfF/view?usp=drive_link",
+      icon: FileTextIcon,
+    },
     { name: "Portfólio", href: "/projects", icon: FolderGit2Icon },
     { name: "Contatos", href: "/#contact", icon: MailIcon },
   ];
