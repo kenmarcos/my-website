@@ -22,7 +22,7 @@ export const useSidebarContent = (isCollapsed: boolean) => {
       icon: FileTextIcon,
     },
     { name: "Portfólio", href: "/projects", icon: FolderGit2Icon },
-    { name: "Contatos", href: "/#contact", icon: MailIcon },
+    { name: "Contatos", href: "/contacts", icon: MailIcon },
   ];
 
   const socialLinks = [
