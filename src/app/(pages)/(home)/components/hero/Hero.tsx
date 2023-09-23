@@ -1,16 +1,15 @@
-import HeroSubtitle from "./components/hero-subtitle/HeroSubtitle";
+import Link from "next/link";
+
+import HeroActions from "./components/hero-actions/HeroActions";
+import HeroHeader from "./components/hero-header/HeroHeader";
 
 const Hero = () => {
   return (
     <section className="h-screen flex justify-center items-center bg-hero bg-cover bg-center p-4">
-      <div className="space-y-4">
-        <h1 className="text-6xl font-bold max-w-[450px] leading-[1.10]">
-          Marcos Kenji Kuribayashi
-        </h1>
+      <div className="max-w-[450px]">
+        <HeroHeader />
 
-        <p className="text-3xl">
-          <HeroSubtitle />
-        </p>
+        <HeroActions />
       </div>
     </section>
   );

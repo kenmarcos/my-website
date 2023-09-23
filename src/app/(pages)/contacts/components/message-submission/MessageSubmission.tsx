@@ -4,7 +4,7 @@ import { Textarea } from "components/ui/textarea";
 
 const MessageSubmission = () => {
   return (
-    <section className="basis-1/2">
+    <section className="w-full max-w-xl">
       <form className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Input placeholder="Seu nome" />
