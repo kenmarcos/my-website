@@ -23,12 +23,6 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 
-enum SkillLevel {
-  Básico,
-  Intermediário,
-  Avançado,
-}
-
 const mainSkills = [
   { name: "React", icon: SiReact },
   { name: "TypeScript", icon: SiTypescript },
@@ -63,12 +57,12 @@ const otherSkills = [
 const Skills = () => {
   return (
     <section className="py-14 min-h-screen bg-blue-dark" id="skills">
-      <div className="px-2 md:px-8">
+      <div className="px-4 md:px-8">
         <h2 className="text-4xl text-blue-primary decoration-4 underline underline-offset-[16px]">
           Habilidades
         </h2>
 
-        <div className="mt-12 bg-blue-light p-4 rounded-md mx-4 md:mx-8">
+        <div className="mt-12 bg-blue-light p-4 rounded-md mx-8">
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-2">
             {mainSkills.map(({ icon: Icon, ...skill }) => (
               <li key={skill.name}>
@@ -85,7 +79,7 @@ const Skills = () => {
           </ul>
         </div>
 
-        <ul className="mt-8 mx-4 space-y-1 md:mx-8">
+        <ul className="mt-8 mx-8 space-y-1">
           {otherSkills.map(({ description }) => (
             <li key={description} className="flex gap-2 items-center">
               <LuCheck />
