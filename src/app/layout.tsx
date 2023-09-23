@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body className={openSans.className}>
         <div className="max-w-[1440px] mx-auto relative md:flex">
           <Sidebar />
