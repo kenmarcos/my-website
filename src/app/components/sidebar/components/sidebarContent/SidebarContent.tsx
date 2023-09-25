@@ -43,6 +43,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
                 <a
                   href={href}
                   target="_blank"
+                  title={name}
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-gray-primary rounded-full p-2 duration-300 ease-in-out hover:bg-gray-light"
                 >
