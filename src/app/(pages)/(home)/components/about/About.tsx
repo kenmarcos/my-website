@@ -1,7 +1,7 @@
+import LinkCta from "components/link-cta/LinkCta";
 import SectionTitle from "components/section-title/SectionTitle";
 
 import AboutContent from "./components/about-content/AboutContent";
-import LinkedinLink from "./components/linkedin-link/LinkedinLink";
 
 const About = () => {
   return (
@@ -11,7 +11,11 @@ const About = () => {
 
         <AboutContent />
 
-        <LinkedinLink />
+        <LinkCta
+          title="Veja mais detalhes da minha trajetoria profissional:"
+          link="https://www.linkedin.com/in/marcos-kuribayashi"
+          cta="Acessar LinkedIn"
+        />
       </div>
     </section>
   );
