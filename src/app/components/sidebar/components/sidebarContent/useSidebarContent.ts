@@ -32,7 +32,7 @@ export const useSidebarContent = (isCollapsed: boolean) => {
       href: "https://drive.google.com/file/d/1dliLFFyLMfrCiAve5SycyjSCGqKCnmfF/view?usp=drive_link",
       icon: LuFileText,
     },
-    { name: "Portfólio", href: "/projects", icon: LuFolderGit2 },
+    { name: "Portfólio", href: "/portfolio", icon: LuFolderGit2 },
     { name: "Contatos", href: "/contacts", icon: LuMail },
   ];
 
