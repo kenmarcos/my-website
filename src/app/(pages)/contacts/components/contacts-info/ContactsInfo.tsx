@@ -1,19 +1,19 @@
-import { AtSignIcon, MapPinIcon, SmartphoneIcon } from "lucide-react";
+import { LuAtSign, LuMap, LuSmartphone } from "react-icons/lu";
 
 const contactsInfo = [
   {
     name: "Localização",
-    icon: MapPinIcon,
+    icon: LuMap,
     description: "São Paulo, SP - Brasil",
   },
   {
     name: "E-mail",
-    icon: AtSignIcon,
+    icon: LuAtSign,
     description: "marcosken13@gmail.com",
   },
   {
     name: "Celular",
-    icon: SmartphoneIcon,
+    icon: LuSmartphone,
     description: "(11) 94231-2965",
   },
 ];

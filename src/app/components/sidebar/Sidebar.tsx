@@ -1,12 +1,12 @@
 "use client";
 
+import { LuMenu, LuX } from "react-icons/lu";
+
 import { Button } from "../../../components/ui/button";
 import SidebarActions from "./components/sidebarActions/SidebarActions";
 import SidebarContent from "./components/sidebarContent/SidebarContent";
 import SidebarFooter from "./components/sidebarFooter/SidebarFooter";
 import { useSidebar } from "./useSidebar";
-
-import { MenuIcon, XIcon } from "lucide-react";
 
 const Sidebar = () => {
   const {
@@ -37,8 +37,8 @@ const Sidebar = () => {
         onClick={handleSidebarShow}
         title="Menu"
       >
-        {!isShow && <MenuIcon />}
-        {isShow && <XIcon />}
+        {!isShow && <LuMenu size={28} />}
+        {isShow && <LuX size={28} />}
       </Button>
     </>
   );

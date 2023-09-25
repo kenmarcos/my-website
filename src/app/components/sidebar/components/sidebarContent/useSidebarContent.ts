@@ -1,38 +1,39 @@
 import {
-  ComputerIcon,
-  FileTextIcon,
-  FolderGit2Icon,
-  GithubIcon,
-  HomeIcon,
-  LinkedinIcon,
-  MailIcon,
-  PhoneIcon,
-  UserIcon,
-} from "lucide-react";
+  LuComputer,
+  LuFileText,
+  LuFolderGit2,
+  LuGithub,
+  LuHome,
+  LuLinkedin,
+  LuMail,
+  LuPhone,
+  LuUser,
+} from "react-icons/lu";
+
 import { twMerge } from "tailwind-merge";
 
 export const useSidebarContent = (isCollapsed: boolean) => {
-  const navLinks = [
-    { name: "Home", href: "/", icon: HomeIcon },
-    { name: "Sobre mim", href: "/#about", icon: UserIcon },
-    { name: "Habilidades", href: "/#skills", icon: ComputerIcon },
-    {
-      name: "Currículo",
-      href: "https://drive.google.com/file/d/1dliLFFyLMfrCiAve5SycyjSCGqKCnmfF/view?usp=drive_link",
-      icon: FileTextIcon,
-    },
-    { name: "Portfólio", href: "/projects", icon: FolderGit2Icon },
-    { name: "Contatos", href: "/contacts", icon: MailIcon },
-  ];
-
   const socialLinks = [
-    { name: "WhatsApp", href: "https://wa.me/5511942312965", icon: PhoneIcon },
+    { name: "WhatsApp", href: "https://wa.me/5511942312965", icon: LuPhone },
     {
       name: "Linkedin",
       href: "https://www.linkedin.com/in/marcos-kuribayashi/",
-      icon: LinkedinIcon,
+      icon: LuLinkedin,
     },
-    { name: "GitHub", href: "https://gitlab.com/kenmarcos", icon: GithubIcon },
+    { name: "GitHub", href: "https://gitlab.com/kenmarcos", icon: LuGithub },
+  ];
+
+  const navLinks = [
+    { name: "Home", href: "/", icon: LuHome },
+    { name: "Sobre mim", href: "/#about", icon: LuUser },
+    { name: "Habilidades", href: "/#skills", icon: LuComputer },
+    {
+      name: "Currículo",
+      href: "https://drive.google.com/file/d/1dliLFFyLMfrCiAve5SycyjSCGqKCnmfF/view?usp=drive_link",
+      icon: LuFileText,
+    },
+    { name: "Portfólio", href: "/projects", icon: LuFolderGit2 },
+    { name: "Contatos", href: "/contacts", icon: LuMail },
   ];
 
   const avatarClassName = twMerge(
