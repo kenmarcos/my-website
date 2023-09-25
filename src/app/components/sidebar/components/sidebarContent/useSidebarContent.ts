@@ -24,7 +24,7 @@ export const useSidebarContent = (isCollapsed: boolean) => {
   ];
 
   const navLinks = [
-    { name: "Home", href: "/", icon: LuHome },
+    { name: "Home", href: "/#hero", icon: LuHome },
     { name: "Sobre mim", href: "/#about", icon: LuUser },
     { name: "Habilidades", href: "/#skills", icon: LuComputer },
     {
