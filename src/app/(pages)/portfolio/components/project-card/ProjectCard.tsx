@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { LuPlusCircle } from "react-icons/lu";
 
-import { Button } from "components/ui/button";
+import ProjectDetails from "./components/project-details/ProjectDetails";
 
 const ProjectCard = () => {
   return (
@@ -20,17 +19,7 @@ const ProjectCard = () => {
         <div className="flex items-center py-5 px-4">
           <h4 className="flex-1 text-lg font-semibold">Lorem impsum dolor</h4>
 
-          <div>
-            <Button
-              size="icon"
-              className="group/details bg-transparent hover:bg-transparent"
-            >
-              <LuPlusCircle
-                size={28}
-                className="duration-300 ease-in-out group-hover/details:text-blue-primary"
-              />
-            </Button>
-          </div>
+          <ProjectDetails />
         </div>
       </div>
     </div>
