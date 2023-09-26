@@ -1,8 +1,5 @@
-import Image from "next/image";
-
 import LinkCta from "components/link-cta/LinkCta";
 import SectionTitle from "components/section-title/SectionTitle";
-import { Button } from "components/ui/button";
 
 import ProjectCard from "./components/project-card/ProjectCard";
 
