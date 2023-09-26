@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 export const useSidebar = () => {
   const [isShow, setIsShow] = useState(false);
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const asideClassName = twMerge(
     "fixed z-10 left-0 bg-blue-dark h-screen flex flex-col md:sticky top-0 border-r border-blue-primary",
