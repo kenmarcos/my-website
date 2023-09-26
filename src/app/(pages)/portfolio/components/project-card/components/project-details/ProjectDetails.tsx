@@ -10,15 +10,24 @@ import {
   DialogTrigger,
 } from "components/ui/dialog";
 
+import { Project } from "types";
+
 const techs = ["typescript", "react", "nextjs", "tailwind", "mongodb"];
 
-const ProjectDetails = () => {
+interface ProjectDetailsProps {
+  project: Project;
+}
+
+const ProjectDetails = ({ project }: ProjectDetailsProps) => {
+  const { name, description, techs, github, demo, image } = project;
+
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
           size="icon"
           className="group/details bg-transparent hover:bg-transparent"
+          title="Detalhes"
         >
           <LuPlusCircle
             size={28}
@@ -29,15 +38,11 @@ const ProjectDetails = () => {
 
       <DialogContent className="bg-blue-dark">
         <DialogHeader>
-          <DialogTitle>Lorem impsum dolor</DialogTitle>
+          <DialogTitle>{name}</DialogTitle>
         </DialogHeader>
 
         <div className="mt-6 space-y-6">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-            dignissimos nulla ad minima distinctio fuga, praesentium corrupti at
-            sit expedita hic ut illum natus ex nam quam possimus quo soluta.
-          </p>
+          <p>{description}</p>
 
           <ul className="flex flex-wrap gap-2">
             {techs.map((tech) => (
@@ -52,9 +57,19 @@ const ProjectDetails = () => {
         </div>
 
         <DialogFooter className="mt-10">
-          <Button variant="secondary">GitHub</Button>
+          {github && (
+            <Button variant="secondary" asChild>
+              <a href={github} target="_blank" rel="noreferrer noopener">
+                GitHub
+              </a>
+            </Button>
+          )}
 
-          <Button className="bg-blue-primary">Demonstração</Button>
+          <Button className="bg-blue-primary" asChild>
+            <a href={demo} target="_blank" rel="noreferrer noopener">
+              Deploy
+            </a>
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
