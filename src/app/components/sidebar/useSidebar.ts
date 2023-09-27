@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { twMerge } from "tailwind-merge";
 
 export const useSidebar = () => {
   const [isShow, setIsShow] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
+
+  useEffect(() => {
+    setIsShow(window.innerWidth > 768);
+  }, []);
 
   const asideClassName = twMerge(
     "fixed z-10 left-0 bg-blue-dark h-screen flex flex-col md:sticky top-0 border-r border-blue-primary",
