@@ -61,7 +61,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
             <li key={name}>
               <Link
                 href={href}
-                className={navLinkClassName}
+                className={navLinkClassName(href)}
                 title={name}
                 target={name === "Currículo" ? "_blank" : "_self"}
                 rel={name === "Currículo" ? "noopener noreferrer" : undefined}
