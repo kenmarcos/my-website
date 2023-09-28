@@ -4,30 +4,6 @@ import { gql } from "@apollo/client";
 import { getClient } from "lib/client";
 import { MainSkill } from "types";
 
-// const mainSkills = [
-// { name: "React", icon: "react" },
-// { name: "TypeScript", icon: SiTypescript },
-// { name: "Next.js", icon: SiNextdotjs },
-// { name: "Redux", icon: SiRedux },
-// { name: "JavaScript", icon: SiJavascript },
-// { name: "HTML", icon: SiHtml5 },
-// { name: "CSS", icon: SiCss3 },
-// { name: "Sass", icon: SiSass },
-// { name: "Styled Components", icon: SiStyledcomponents },
-// { name: "Tailwind", icon: SiTailwindcss },
-// { name: "Bootstrap", icon: SiBootstrap },
-// { name: "Node.js", icon: SiNodedotjs },
-// { name: "Express", icon: SiExpress },
-// { name: "Prisma", icon: SiPrisma },
-// { name: "PostgreSQL", icon: SiPostgresql },
-// { name: "MongoDB", icon: SiMongodb },
-// { name: "Firebase", icon: SiFirebase },
-// { name: "Git", icon: SiGit },
-// { name: "Jest", icon: SiJest },
-// { name: "Testing Library", icon: SiTestinglibrary },
-// { name: "VS Code", icon: SiVisualstudiocode },
-// ];
-
 const MainSkills = async () => {
   const { data } = await getClient().query<{ mainSkills: MainSkill[] }>({
     query: gql`
@@ -39,6 +15,11 @@ const MainSkills = async () => {
         }
       }
     `,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 60 * 60 * 24 * 15 }, // revalidate every 15 days
+      },
+    },
   });
 
   return (
