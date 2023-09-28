@@ -7,7 +7,7 @@ export const useSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   useEffect(() => {
-    setIsShow(window.innerWidth > 768);
+    setIsShow(window.innerWidth >= 768);
   }, []);
 
   const asideClassName = twMerge(
