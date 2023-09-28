@@ -57,19 +57,19 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </div>
 
         <DialogFooter className="mt-10">
-          {github && (
-            <Button variant="secondary" asChild>
-              <a href={github} target="_blank" rel="noreferrer noopener">
-                GitHub
+          <Button variant="secondary" asChild>
+            <a href={github} target="_blank" rel="noreferrer noopener">
+              GitHub
+            </a>
+          </Button>
+
+          {demo && (
+            <Button className="bg-blue-primary" asChild>
+              <a href={demo} target="_blank" rel="noreferrer noopener">
+                Deploy
               </a>
             </Button>
           )}
-
-          <Button className="bg-blue-primary" asChild>
-            <a href={demo} target="_blank" rel="noreferrer noopener">
-              Deploy
-            </a>
-          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
