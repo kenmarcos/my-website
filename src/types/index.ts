@@ -14,3 +14,8 @@ export interface MainSkill {
   name: string;
   icon: string;
 }
+
+export interface OtherSkill {
+  id: string;
+  description: string;
+}
