@@ -9,3 +9,8 @@ export interface Project {
     url: string;
   };
 }
+
+export interface MainSkill {
+  name: string;
+  icon: string;
+}
