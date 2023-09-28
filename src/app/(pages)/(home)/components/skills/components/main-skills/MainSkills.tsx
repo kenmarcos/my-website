@@ -8,7 +8,7 @@ const MainSkills = async () => {
   const { data } = await getClient().query<{ mainSkills: MainSkill[] }>({
     query: gql`
       query getMainSkills {
-        mainSkills {
+        mainSkills(first: 30) {
           id
           name
           icon
