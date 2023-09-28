@@ -33,6 +33,7 @@ const MainSkills = async () => {
     query: gql`
       query getMainSkills {
         mainSkills {
+          id
           name
           icon
         }
@@ -43,8 +44,8 @@ const MainSkills = async () => {
   return (
     <section className="bg-blue-light p-4 rounded-md">
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-2">
-        {data.mainSkills.map(({ name, icon }) => (
-          <li key={name}>
+        {data.mainSkills.map(({ id, name, icon }) => (
+          <li key={id}>
             <div className="flex p-2 gap-2 items-center text-blue-dark">
               <div>
                 <Image

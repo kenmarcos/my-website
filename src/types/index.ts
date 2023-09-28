@@ -11,6 +11,7 @@ export interface Project {
 }
 
 export interface MainSkill {
+  id: string;
   name: string;
   icon: string;
 }
