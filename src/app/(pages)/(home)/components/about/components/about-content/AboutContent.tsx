@@ -1,6 +1,19 @@
 import Image from "next/image";
 
-const AboutContent = () => {
+import { gql } from "@apollo/client";
+import { getClient } from "lib/client";
+
+const AboutContent = async () => {
+  const { data } = await getClient().query({
+    query: gql`
+      query GetAbout {
+        about(where: { id: "cln4y2kmhbgbg0blx46ffbmyq" }) {
+          aboutText
+        }
+      }
+    `,
+  });
+
   return (
     <section className="mt-12 flex flex-wrap gap-12 justify-center">
       <div className="relative h-80 aspect-[3/4]">
@@ -17,25 +30,7 @@ const AboutContent = () => {
       </div>
 
       <div className="flex flex-col gap-4 max-w-xl justify-center">
-        <p>
-          Desenvolvedor Full-Stack formado pela Kenzie Academy Brasil e Bacharel
-          em Ciência e Tecnologia pela UFABC. Meu interesse pela programação
-          despertou durante a graduação e desde então tenho me dedicado a
-          especializar nessa área.
-        </p>
-
-        <p>
-          Meu foco é na construção de aplicações completas de alta qualidade,
-          desde a aparência do front-end até o funcionamento nos bastidores do
-          back-end. Busco criar interfaces responsivas e dinâmicas que ofereçam
-          uma excelente experiência ao usuário, combinando beleza e
-          funcionalidade.
-        </p>
-
-        <p>
-          Meu objetivo é construir uma carreira sólida, buscando sempre aprender
-          e aprimorar minhas habilidades.
-        </p>
+        <p className="whitespace-pre-line">{data.about.aboutText}</p>
       </div>
     </section>
   );

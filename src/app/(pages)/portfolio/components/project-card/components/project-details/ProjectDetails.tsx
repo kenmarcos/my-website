@@ -42,7 +42,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </DialogHeader>
 
         <div className="mt-6 space-y-6">
-          <p>{description}</p>
+          <p className="whitespace-pre-line">{description}</p>
 
           <ul className="flex flex-wrap gap-2">
             {techs.map((tech) => (
