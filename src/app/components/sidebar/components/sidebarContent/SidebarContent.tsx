@@ -16,6 +16,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
     navLinks,
     socialLinks,
     avatarClassName,
+    titleClassName,
     socialLinksClassName,
     navLinkClassName,
   } = useSidebarContent(isCollapsed);
@@ -30,11 +31,9 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
           </Avatar>
         </Link>
 
-        {!isCollapsed && (
-          <Link href="/" className="w-52 text-center">
-            <h2 className="text-2xl font-semibold">Marcos Kenji Kuribayashi</h2>
-          </Link>
-        )}
+        <Link href="/" className={titleClassName}>
+          <h2 className="text-2xl font-semibold">Marcos Kenji Kuribayashi</h2>
+        </Link>
 
         <nav>
           <ul className={socialLinksClassName}>
@@ -55,7 +54,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
         </nav>
       </div>
 
-      <nav className="mt-8">
+      <nav className="mt-6">
         <ul>
           {navLinks.map(({ icon: Icon, name, href }) => (
             <li key={name}>
@@ -67,7 +66,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
                 rel={name === "Currículo" ? "noopener noreferrer" : undefined}
               >
                 <Icon size={20} />
-                {!isCollapsed && <p>{name}</p>}
+                {!isCollapsed && <p className="animate-fade-in">{name}</p>}
               </Link>
             </li>
           ))}
