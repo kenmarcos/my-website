@@ -19,18 +19,16 @@ const Sidebar = () => {
 
   return (
     <>
-      {isShow && (
-        <aside className={asideClassName}>
-          <SidebarActions
-            isCollapsed={isCollapsed}
-            setIsCollapsed={setIsCollapsed}
-          />
+      <aside className={asideClassName}>
+        <SidebarActions
+          isCollapsed={isCollapsed}
+          setIsCollapsed={setIsCollapsed}
+        />
 
-          <SidebarContent isCollapsed={isCollapsed} />
+        <SidebarContent isCollapsed={isCollapsed} />
 
-          <SidebarFooter isCollapsed={isCollapsed} />
-        </aside>
-      )}
+        <SidebarFooter isCollapsed={isCollapsed} />
+      </aside>
 
       <Button
         className="fixed z-10 h-12 w-12 p-2 right-4 top-4 rounded-full bg-blue-primary md:hidden"

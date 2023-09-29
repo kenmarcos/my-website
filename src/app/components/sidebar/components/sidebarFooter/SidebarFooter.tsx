@@ -8,16 +8,16 @@ const SidebarFooter = ({ isCollapsed }: sidebarFooterProps) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <p
-        className="text-xs text-center"
-        title="Desenvolvido por Marcos Kenji Kuribayashi"
-      >
-        {!isCollapsed &&
-          `${currentYear} - Desenvolvido por Marcos Kenji
-            Kuribayashi `}
-        <span className="cursor-default">😉</span>
-      </p>
+    <footer
+      className="text-center pb-2"
+      title="Desenvolvido por Marcos Kenji Kuribayashi"
+    >
+      {!isCollapsed && (
+        <span className="text-xs animate-fade-in">
+          {currentYear} - Desenvolvido por Marcos Kenji Kuribayashi{" "}
+        </span>
+      )}
+      <span className="cursor-default">😉</span>
     </footer>
   );
 };

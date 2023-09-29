@@ -85,9 +85,29 @@ module.exports = {
           to: { height: 0 },
         },
       },
+      keyframes: {
+        fadeIn: {
+          from: {
+            opacity: 0,
+          },
+          to: {
+            opacity: 1,
+          },
+        },
+        flipAvatar: {
+          "50%": {
+            transform: "rotateY(180deg)",
+          },
+          to: {
+            transform: "rotateY(360deg)",
+          },
+        },
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 1s ease-in-out",
+        "flip-avatar": "flipAvatar 1s ease-out",
       },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],

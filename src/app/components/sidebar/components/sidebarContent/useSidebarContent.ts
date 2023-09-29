@@ -49,7 +49,13 @@ export const useSidebarContent = (isCollapsed: boolean) => {
   }, [params]);
 
   const avatarClassName = twMerge(
+    "ease-in-out duration-500 hover:animate-flip-avatar",
     isCollapsed ? "h-10 w-10 mb-4" : "h-28 w-28 border-8 border-gray-light"
+  );
+
+  const titleClassName = twMerge(
+    "w-52 text-center",
+    isCollapsed ? "hidden" : "animate-fade-in block"
   );
 
   const socialLinksClassName = twMerge(
@@ -59,7 +65,7 @@ export const useSidebarContent = (isCollapsed: boolean) => {
 
   const navLinkClassName = (href: string) => {
     return twMerge(
-      "flex items-center text-sm gap-1 rounded-sm py-3 hover:bg-gray-light duration-300 ease-in-out hover:text-gray-dark",
+      "flex items-center text-sm gap-2 rounded-sm py-3 hover:bg-gray-light duration-300 ease-in-out hover:text-gray-dark",
       isCollapsed ? "justify-center" : "justify-start px-2",
       path === href ? "bg-gray-light text-gray-dark" : "text-gray-light"
     );
@@ -69,6 +75,7 @@ export const useSidebarContent = (isCollapsed: boolean) => {
     navLinks,
     socialLinks,
     avatarClassName,
+    titleClassName,
     socialLinksClassName,
     navLinkClassName,
   };

@@ -11,8 +11,9 @@ export const useSidebar = () => {
   }, []);
 
   const asideClassName = twMerge(
-    "fixed z-10 left-0 bg-blue-dark h-screen flex flex-col md:sticky top-0 border-r border-blue-primary",
-    isCollapsed ? "w-16 p-2" : "w-52 p-4"
+    "fixed z-10 overflow-y-auto ease-in-out duration-500 left-0 bg-blue-dark h-screen flex flex-col md:sticky top-0 border-r border-blue-primary",
+    isCollapsed ? "w-16 px-2" : "w-[230px] px-4",
+    isShow ? "translate-x-0" : "-translate-x-full"
   );
 
   const handleSidebarShow = () => {
