@@ -4,9 +4,9 @@ import { Textarea } from "components/ui/textarea";
 
 const MessageSubmission = () => {
   return (
-    <section className="w-full max-w-xl">
+    <section className="lg-order-last lg:col-span-2">
       <form className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-wrap gap-6">
           <Input placeholder="Seu nome" />
 
           <Input placeholder="Seu e-mail" />
