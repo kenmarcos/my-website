@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -32,7 +33,9 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
         </Link>
 
         <Link href="/" className={titleClassName}>
-          <h2 className="text-2xl font-semibold">Marcos Kenji Kuribayashi</h2>
+          <div className="relative h-12">
+            <Image src="/logo.svg" alt="Logo" fill sizes="100%" />
+          </div>
         </Link>
 
         <nav>
