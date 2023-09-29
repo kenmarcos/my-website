@@ -9,10 +9,10 @@ const ContactsPage = () => {
       <div className="px-4 md:px-10">
         <SectionTitle>Contatos</SectionTitle>
 
-        <div className="mt-12 flex flex-wrap-reverse gap-y-20 gap-x-10 justify-center">
-          <ContactsInfo />
-
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 lg:max-w-5xl lg:mx-auto gap-x-10 gap-y-20">
           <MessageSubmission />
+
+          <ContactsInfo />
         </div>
       </div>
     </section>
