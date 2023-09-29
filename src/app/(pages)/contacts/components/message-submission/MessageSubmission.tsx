@@ -4,23 +4,23 @@ import { Textarea } from "components/ui/textarea";
 
 const MessageSubmission = () => {
   return (
-    <section className="w-full max-w-xl">
+    <section className="lg-order-last lg:col-span-2">
       <form className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-wrap gap-6 text-gray-primary">
           <Input placeholder="Seu nome" />
 
           <Input placeholder="Seu e-mail" />
         </div>
 
-        <div>
+        <div className="text-gray-primary">
           <Input placeholder="Assunto" />
         </div>
 
-        <div>
+        <div className="text-gray-primary">
           <Textarea placeholder="Mensagem" rows={7} />
         </div>
 
-        <div className="text-center">
+        <div className="text-end">
           <Button className="bg-blue-primary w-full md:max-w-[160px]">
             Enviar Menssagem
           </Button>
