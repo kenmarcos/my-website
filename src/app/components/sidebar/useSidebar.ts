@@ -26,5 +26,6 @@ export const useSidebar = () => {
     isCollapsed,
     setIsCollapsed,
     handleSidebarShow,
+    setIsShow,
   };
 };
