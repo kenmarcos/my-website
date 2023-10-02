@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { Dispatch } from "react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "components/ui/avatar";
 
@@ -9,9 +10,10 @@ import { useSidebarContent } from "./useSidebarContent";
 
 interface sidebarContentProps {
   isCollapsed: boolean;
+  setIsShow: Dispatch<React.SetStateAction<boolean>>;
 }
 
-const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
+const SidebarContent = ({ isCollapsed, setIsShow }: sidebarContentProps) => {
   const {
     navLinks,
     socialLinks,
@@ -19,7 +21,8 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
     titleClassName,
     socialLinksClassName,
     navLinkClassName,
-  } = useSidebarContent(isCollapsed);
+    closeSidebar,
+  } = useSidebarContent(isCollapsed, setIsShow);
 
   return (
     <section className="flex-1">
@@ -32,7 +35,9 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
         </Link>
 
         <Link href="/" className={titleClassName}>
-          <h2 className="text-2xl font-semibold">Marcos Kenji Kuribayashi</h2>
+          <div className="relative h-12">
+            <Image src="/logo.svg" alt="Logo" fill sizes="100%" />
+          </div>
         </Link>
 
         <nav>
@@ -57,7 +62,7 @@ const SidebarContent = ({ isCollapsed }: sidebarContentProps) => {
       <nav className="mt-6">
         <ul>
           {navLinks.map(({ icon: Icon, name, href }) => (
-            <li key={name}>
+            <li key={name} onClick={closeSidebar}>
               <Link
                 href={href}
                 className={navLinkClassName(href)}

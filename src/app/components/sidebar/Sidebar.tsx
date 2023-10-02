@@ -14,6 +14,7 @@ const Sidebar = () => {
     isShow,
     isCollapsed,
     setIsCollapsed,
+    setIsShow,
     handleSidebarShow,
   } = useSidebar();
 
@@ -25,7 +26,7 @@ const Sidebar = () => {
           setIsCollapsed={setIsCollapsed}
         />
 
-        <SidebarContent isCollapsed={isCollapsed} />
+        <SidebarContent isCollapsed={isCollapsed} setIsShow={setIsShow} />
 
         <SidebarFooter isCollapsed={isCollapsed} />
       </aside>

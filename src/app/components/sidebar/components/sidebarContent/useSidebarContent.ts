@@ -1,5 +1,5 @@
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Dispatch, useEffect, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import {
   LuComputer,
@@ -14,7 +14,10 @@ import {
 
 import { twMerge } from "tailwind-merge";
 
-export const useSidebarContent = (isCollapsed: boolean) => {
+export const useSidebarContent = (
+  isCollapsed: boolean,
+  setIsShow: Dispatch<React.SetStateAction<boolean>>
+) => {
   const socialLinks = [
     {
       name: "WhatsApp",
@@ -71,6 +74,12 @@ export const useSidebarContent = (isCollapsed: boolean) => {
     );
   };
 
+  const closeSidebar = () => {
+    if (window.innerWidth < 768) {
+      setIsShow(false);
+    }
+  };
+
   return {
     navLinks,
     socialLinks,
@@ -78,5 +87,6 @@ export const useSidebarContent = (isCollapsed: boolean) => {
     titleClassName,
     socialLinksClassName,
     navLinkClassName,
+    closeSidebar,
   };
 };

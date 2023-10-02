@@ -20,3 +20,11 @@ export interface OtherSkill {
   id: string;
   description: string;
 }
+
+export interface About {
+  id: string;
+  aboutText: string;
+  image: {
+    url: string;
+  };
+}
