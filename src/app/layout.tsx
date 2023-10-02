@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
+import { Toaster } from "components/ui/toaster";
+
 import Sidebar from "./components/sidebar/Sidebar";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -23,6 +25,7 @@ export default function RootLayout({
 
           <main className="flex-1">{children}</main>
         </div>
+        <Toaster />
       </body>
     </html>
   );

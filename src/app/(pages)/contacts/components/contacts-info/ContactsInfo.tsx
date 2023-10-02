@@ -32,7 +32,7 @@ const ContactsInfo = () => {
               <div>
                 <h3 className="text-xl font-bold">{name}</h3>
 
-                <address className="text-sm">{description}</address>
+                <address className="text-sm break-all">{description}</address>
               </div>
             </div>
           </li>
