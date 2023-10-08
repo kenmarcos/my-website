@@ -27,7 +27,7 @@ const PortfolioPage = async () => {
   });
 
   return (
-    <section className="py-14 bg-blue-dark min-h-screen" id="about">
+    <section className="py-14 bg-background min-h-screen" id="about">
       <div className="px-4 md:px-10">
         <SectionTitle>Portfólio</SectionTitle>
 

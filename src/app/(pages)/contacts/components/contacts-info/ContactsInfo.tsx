@@ -24,9 +24,9 @@ const ContactsInfo = () => {
       <ul className="space-y-6">
         {contactsInfo.map(({ name, icon: Icon, description }) => (
           <li key={name}>
-            <div className="flex items-center gap-4 bg-gray-light rounded-md p-4 shadow-xl shadow-gray-dark">
-              <div className="bg-blue-dark rounded-full p-2">
-                <Icon size={20} className="text-blue-primary" />
+            <div className="flex items-center gap-4 bg-secondary rounded-md p-4 shadow-md shadow-secondary-foreground">
+              <div className="rounded-full p-2">
+                <Icon size={20} className="text-primary" />
               </div>
 
               <div>

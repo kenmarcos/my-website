@@ -5,7 +5,7 @@ import OtherSkills from "./components/other-skills/OtherSkills";
 
 const Skills = () => {
   return (
-    <section className="py-14 min-h-screen bg-blue-dark" id="skills">
+    <section className="py-14 min-h-screen bg-primary-foreground" id="skills">
       <div className="px-4 md:px-8">
         <SectionTitle>Habilidades</SectionTitle>
 

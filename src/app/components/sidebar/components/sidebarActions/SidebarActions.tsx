@@ -23,14 +23,10 @@ const SidebarActions = ({
 
   return (
     <section className={collapseButtonClassName}>
-      <Button className="bg-transparent px-0" onClick={handleSidebarCollapse}>
-        {!isCollapsed && (
-          <LuChevronsLeft size={32} className="text-gray-light" />
-        )}
+      <Button variant="ghost" className="px-0" onClick={handleSidebarCollapse}>
+        {!isCollapsed && <LuChevronsLeft size={32} />}
 
-        {isCollapsed && (
-          <LuChevronsRight size={32} className="text-gray-light" />
-        )}
+        {isCollapsed && <LuChevronsRight size={32} />}
       </Button>
     </section>
   );

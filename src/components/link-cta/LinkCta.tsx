@@ -14,7 +14,7 @@ const LinkCta = ({ title, link, cta }: LinkCtaProps) => {
       <Button
         asChild
         variant="link"
-        className="text-blue-primary text-2xl font-semibold"
+        className="text-primary text-2xl font-semibold"
       >
         <a rel="noreferrer noopener" href={link} target="_blank">
           {cta}

@@ -32,7 +32,7 @@ const Sidebar = () => {
       </aside>
 
       <Button
-        className="fixed z-10 h-12 w-12 p-2 right-4 top-4 rounded-full bg-blue-primary md:hidden"
+        className="fixed z-10 h-12 w-12 p-2 right-[68px] top-4 rounded-full bg-primary md:hidden"
         onClick={handleSidebarShow}
         title="Menu"
       >

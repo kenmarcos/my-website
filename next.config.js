@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "media.graphassets.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.simpleicons.org",
+        port: "",
+      },
     ],
   },
 };

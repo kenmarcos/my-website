@@ -23,15 +23,15 @@ const MainSkills = async () => {
   });
 
   return (
-    <section className="bg-blue-light p-4 rounded-md">
+    <section className="bg-secondary p-4 rounded-md">
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-y-2">
         {data.mainSkills.map(({ id, name, icon }) => (
           <li key={id}>
-            <div className="flex p-2 gap-2 items-center text-blue-dark">
+            <div className="flex p-2 gap-2 items-center">
               <div>
-                <Image
-                  src={`https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/${icon}.svg`}
-                  alt={name}
+                <img
+                  src={`https://cdn.simpleicons.org/${icon}/000000/ffffff`}
+                  alt={icon}
                   width={35}
                   height={35}
                 />

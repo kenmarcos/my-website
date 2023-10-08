@@ -6,7 +6,7 @@ interface SectionTitle {
 
 const SectionTitle = ({ children }: SectionTitle) => {
   return (
-    <h2 className="text-4xl text-blue-primary decoration-4 underline underline-offset-[16px]">
+    <h2 className="text-4xl text-primary decoration-4 underline underline-offset-[16px]">
       {children}
     </h2>
   );

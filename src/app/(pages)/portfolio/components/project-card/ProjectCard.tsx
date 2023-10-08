@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         />
       </div>
 
-      <div className="bg-gray-primary">
+      <div className="bg-secondary">
         <div className="flex items-center py-5 px-4">
           <h4
             className="flex-1 text-lg font-semibold line-clamp-1"

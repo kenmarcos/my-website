@@ -25,8 +25,8 @@ const SidebarContent = ({ isCollapsed, setIsShow }: sidebarContentProps) => {
   } = useSidebarContent(isCollapsed, setIsShow);
 
   return (
-    <section className="flex-1">
-      <div className="flex flex-col items-center space-y-2 mt-4">
+    <section className="flex-1 ">
+      <div className="flex flex-col items-center space-y-4 bg-accent-foreground dark:bg-transparent py-4">
         <Link href="/" title="Marcos Kenji Kuribayashi">
           <Avatar className={avatarClassName}>
             <AvatarImage src="https://github.com/kenmarcos.png" />
@@ -49,9 +49,14 @@ const SidebarContent = ({ isCollapsed, setIsShow }: sidebarContentProps) => {
                   target="_blank"
                   title={name}
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center bg-gray-primary rounded-full p-2 duration-300 ease-in-out hover:bg-gray-light"
+                  className="flex items-center justify-center bg-secondary rounded-full p-2 duration-300 ease-in-out hover:bg-secondary-foreground"
                 >
-                  <Icon size={14} fill="white" />
+                  <Icon
+                    size={14}
+                    fill="#4f91f9"
+                    border
+                    className="text-primary"
+                  />
                 </a>
               </li>
             ))}
@@ -59,7 +64,7 @@ const SidebarContent = ({ isCollapsed, setIsShow }: sidebarContentProps) => {
         </nav>
       </div>
 
-      <nav className="mt-6">
+      <nav className="mt-4 px-4">
         <ul>
           {navLinks.map(({ icon: Icon, name, href }) => (
             <li key={name} onClick={closeSidebar}>

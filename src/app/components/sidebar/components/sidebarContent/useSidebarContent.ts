@@ -53,7 +53,7 @@ export const useSidebarContent = (
 
   const avatarClassName = twMerge(
     "ease-in-out duration-500 hover:animate-flip-avatar",
-    isCollapsed ? "h-10 w-10 mb-4" : "h-28 w-28 border-8 border-gray-light"
+    isCollapsed ? "h-10 w-10 mb-4" : "h-24 w-24 border-4"
   );
 
   const titleClassName = twMerge(
@@ -68,9 +68,11 @@ export const useSidebarContent = (
 
   const navLinkClassName = (href: string) => {
     return twMerge(
-      "flex items-center text-sm gap-2 rounded-sm py-3 hover:bg-gray-light duration-300 ease-in-out hover:text-gray-dark",
+      "flex items-center text-sm gap-2 font-semibold rounded-sm py-3 hover:bg-primary-foreground duration-300 ease-in-out hover:text-secondary-foreground",
       isCollapsed ? "justify-center" : "justify-start px-2",
-      path === href ? "bg-gray-light text-gray-dark" : "text-gray-light"
+      path === href
+        ? "bg-primary-foreground text-secondary-foreground"
+        : "text-primary"
     );
   };
 

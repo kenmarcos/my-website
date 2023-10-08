@@ -5,7 +5,7 @@ import AboutContent from "./components/about-content/AboutContent";
 
 const About = () => {
   return (
-    <section className="py-14 min-h-screen" id="about">
+    <section className="py-14 min-h-screen bg-background" id="about">
       <div className="px-4 md:px-8">
         <SectionTitle>Sobre mim</SectionTitle>
 

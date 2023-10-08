@@ -12,31 +12,30 @@ import {
 
 import { Project } from "types";
 
-const techs = ["typescript", "react", "nextjs", "tailwind", "mongodb"];
-
 interface ProjectDetailsProps {
   project: Project;
 }
 
 const ProjectDetails = ({ project }: ProjectDetailsProps) => {
-  const { name, description, techs, github, demo, image } = project;
+  const { name, description, techs, github, demo } = project;
 
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
+          variant="ghost"
           size="icon"
-          className="group/details bg-transparent hover:bg-transparent"
+          className="group/details"
           title="Detalhes"
         >
           <LuPlusCircle
             size={28}
-            className="duration-300 ease-in-out group-hover/details:text-blue-primary"
+            className="duration-300 ease-in-out group-hover/details:text-primary"
           />
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="bg-blue-dark">
+      <DialogContent className="bg-background">
         <DialogHeader>
           <DialogTitle>{name}</DialogTitle>
         </DialogHeader>
@@ -48,7 +47,7 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
             {techs.map((tech) => (
               <li
                 key={tech}
-                className="bg-gray-light rounded-full px-3 py-1 text-xs text-gray-dark"
+                className="bg-secondary-foreground rounded-full px-3 py-1 text-xs text-secondary"
               >
                 {tech}
               </li>
@@ -57,14 +56,14 @@ const ProjectDetails = ({ project }: ProjectDetailsProps) => {
         </div>
 
         <DialogFooter className="mt-10">
-          <Button variant="secondary" asChild>
+          <Button variant="outline" asChild>
             <a href={github} target="_blank" rel="noreferrer noopener">
               GitHub
             </a>
           </Button>
 
           {demo && (
-            <Button className="bg-blue-primary" asChild>
+            <Button asChild>
               <a href={demo} target="_blank" rel="noreferrer noopener">
                 Deploy
               </a>

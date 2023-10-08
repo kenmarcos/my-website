@@ -11,7 +11,7 @@ export const useSidebarActions = (
   };
 
   const collapseButtonClassName = twMerge(
-    "flex",
+    "flex px-4",
     isCollapsed ? "justify-center" : "justify-end"
   );
 

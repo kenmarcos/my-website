@@ -46,7 +46,7 @@ export const useMessageSubmission = () => {
       console.log(responseData);
       toast({
         title: "Mensagem enviada com sucesso!",
-        className: "bg-green-600 text-white-primary",
+        className: "bg-green-600 text-white",
       });
     } catch (error) {
       toast({
