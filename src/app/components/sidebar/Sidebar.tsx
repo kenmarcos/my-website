@@ -40,14 +40,14 @@ const Sidebar = () => {
         <LuMenu
           size={28}
           className={`transition-all ${
-            isShow ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+            isShow ? "rotate-90 scale-0" : "rotate-0 scale-100"
           } `}
         />
 
         <LuX
           size={28}
           className={`absolute transition-all ${
-            isShow ? "rotate-90 scale-0" : "rotate-0 scale-100"
+            isShow ? "rotate-0 scale-100" : "-rotate-90 scale-0"
           } `}
         />
       </Button>
