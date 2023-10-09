@@ -27,14 +27,14 @@ const SidebarActions = ({
         <LuChevronsLeft
           size={28}
           className={`duration-700 ${
-            isCollapsed ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+            isCollapsed ? "rotate-90 scale-0" : "rotate-0 scale-100"
           } `}
         />
 
         <LuChevronsRight
           size={28}
-          className={`absolute duration-700 ${
-            isCollapsed ? "rotate-90 scale-0" : "rotate-0 scale-100"
+          className={`absolute duration-700 ${ 
+            isCollapsed ? "rotate-0 scale-100" : "-rotate-90 scale-0"
           } `}
         />
       </Button>
