@@ -24,6 +24,11 @@ const PortfolioPage = async () => {
         }
       }
     `,
+    context: {
+      fetchOptions: {
+        next: { revalidate: 60 * 60 * 24 * 15 }, // revalidate every 15 days
+      },
+    },
   });
 
   return (
